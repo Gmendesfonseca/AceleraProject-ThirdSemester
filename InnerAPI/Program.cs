@@ -1,7 +1,10 @@
 using InnerAPI.Controllers;
 using InnerAPI.Services;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.WebHost.UseUrls("http://localhost:7258");
 
 // Registra SharedService como um singleton
 builder.Services.AddSingleton<SharedService>();
@@ -10,22 +13,22 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000") // Substitua pela origem do seu cliente
+        builder.WithOrigins("http://localhost:3000", "http://localhost:5173") // Adicione aqui as origens do seu cliente
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
     options.AddPolicy("AnotherPolicy", builder =>
     {
-        builder.WithOrigins("http://localhost:5173") // Substitua pela origem do seu cliente
+        builder.WithOrigins("http://localhost:5173") // Adicione aqui as origens do seu cliente
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
 });
 
-// Adiciona serviços ao contêiner.
+// Adiciona serviï¿½os ao contï¿½iner.
 
 builder.Services.AddControllers();
-// Saiba mais sobre a configuração do Swagger/OpenAPI em https://aka.ms/aspnetcore/swashbuckle
+// Saiba mais sobre a configuraï¿½ï¿½o do Swagger/OpenAPI em https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -33,20 +36,27 @@ var app = builder.Build();
 
 app.UseCors();
 
-// Obtém as instâncias dos serviços diretamente do contêiner de serviços
+// Obtï¿½m as instï¿½ncias dos serviï¿½os diretamente do contï¿½iner de serviï¿½os
 var sharedService = app.Services.GetRequiredService<SharedService>();
 
 app.MapStudentEndpoint(sharedService);
-app.MapInstitutionEndpoint(sharedService);
+app.MapBranchEndpoint(sharedService);
+app.MapHeadOfficeEndpoint(sharedService);
 app.MapProfessorEndpoint(sharedService);
 app.MapLoginEndpoint(sharedService);
+app.MapPostEndpoint(sharedService);
+app.MapChatEndpoint(sharedService);
+//app.MapCourseEndpoint(sharedService);
 
-// Configura o pipeline de requisições HTTP.
+
+// Configura o pipeline de requisiï¿½ï¿½es HTTP.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
 
 app.UseHttpsRedirection();
 

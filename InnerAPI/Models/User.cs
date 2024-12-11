@@ -1,33 +1,52 @@
-﻿using InnerAPI.Dtos.Post;
-using InnerAPI.Dtos.Notification;
-using InnerAPI.Dtos.Groups;
-using InnerAPI.Dtos.Aluno;
-using InnerAPI.Dtos.Institution;
-using InnerAPI.Dtos.Login;
-using InnerAPI.Utils;
-using InnerAPI.Services;
-
-namespace InnerAPI.Models
+﻿namespace InnerAPI.Models
 {
-    public class User 
+    public abstract class User
     {
         #region "Declaração de variáveis"
         private uint _id;
         private string _name;
         private string _password;
         private string _email;
-        public bool _status;
-        private Stack<NotificationDto> _notifications;
-        private Stack<PostDto> _postagens; 
-        private List<GroupsDto> _grupos;
+        private string _image;
+        private string _about;
+        private bool _isOnline;
+        private bool _isActive;
+        private Stack<Notification> _notifications;
+        private Stack<Post> _personalPosts;
+        private List<Group> _groups;
         #endregion
 
         #region "Construtores"
         public User()
         {
-            List<GroupsDto> _grupos = new List<GroupsDto>();
-            Stack<PostDto> _postagens = new Stack<PostDto>();
-            Stack<NotificationDto> _notifications = new Stack<NotificationDto>();
+            _id = 0;
+            _name = _password = _email = "";
+            _isOnline = _isActive = false;
+            _groups = new List<Group>();
+            _notifications = new Stack<Notification>();
+        }
+
+        public User(uint id, string name, string password, string email, string image, string about)
+        {
+            _id = id;
+            _name = name;
+            _password = password;
+            _email = email;
+            _image = image;
+            _about = about;
+            _isOnline = _isActive = false;
+            _groups = new List<Group>();
+            _notifications = new Stack<Notification>();
+        }
+
+        public User(uint id, string name, string email, string password)
+        {
+            _id = id;
+            _name = name;
+            _password = password;
+            _email = email;
+            _groups = new List<Group>();
+            _notifications = new Stack<Notification>();
         }
         #endregion
 
@@ -56,39 +75,83 @@ namespace InnerAPI.Models
             set { _email = value; }
         }
 
+        //public string Phone
+        //{
+        //    get { return _phone; }
+        //    set { _phone = value; }
+        //}
+
+        public string Avatar
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+
+        public string About
+        {
+            get { return _about; }
+            set { _about = value; }
+        }
+
         public bool Online
         {
-            get { return _status; }
-            set { _status = value; }
+            get { return _isOnline; }
+            set { _isOnline = value; }
+        }
+
+        public bool Active
+        {
+            get { return _isActive; }
+            set { _isActive = value; }
         }
         #endregion
 
         #region "Métodos Listas"
-        public Stack<NotificationDto> getNotifications()
+        public Stack<Notification> Notifications()
         {
             return _notifications;
         }
-        public void addNotification(NotificationDto notification)
+        public void addNotification(Notification notification)
         {
             _notifications.Push(notification);
         }
 
-        public Stack<PostDto> getPostagens()
-        {
-            return _postagens;
-        }
-        public void addPostagem(PostDto postagem)
-        {
-            _postagens.Push(postagem);
-        }
+        //public Stack<Post> Posts()
+        //{
+        //    return _personalPosts;
+        //}
+        //public void addPost(Post post)
+        //{
+        //    _personalPosts.Push(post);
+        //}
+        //public void removePost(Post post)
+        //{
+        //    Stack<Post> tempStack = new Stack<Post>();
+        //    while (_personalPosts.Count > 0)
+        //    {
+        //        Post currentPost = _personalPosts.Pop();
+        //        if (currentPost != post)
+        //        {
+        //            tempStack.Push(currentPost);
+        //        }
+        //    }
+        //    while (tempStack.Count > 0)
+        //    {
+        //        _personalPosts.Push(tempStack.Pop());
+        //    }
+        //}
 
-        public List<GroupsDto> getGrupos()
+        public List<Group> Groups()
         {
-            return _grupos;
+            return _groups;
         }
-        public void addGrupo(GroupsDto grupo)
+        public void addGroup(Group grupo)
         {
-            _grupos.Add(grupo);
+            _groups.Add(grupo);
+        }
+        public void removeGroup(Group group)
+        {
+            _groups.Remove(group);
         }
         #endregion
     }

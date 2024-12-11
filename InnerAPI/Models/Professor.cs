@@ -1,4 +1,7 @@
-﻿namespace InnerAPI.Models
+﻿using System.Reflection.Metadata;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace InnerAPI.Models
 {
     public class Professor : Member
     {
@@ -10,18 +13,18 @@
         #region "Construtores"
         public Professor() : base()
         {
+            _areaLecionada = _formação = "";
         }
 
-        public Professor(uint id, string name, string email, string password, string matricula, string cpf, DateOnly birthDate, string instituicao, string areaLecionada, string formacao)
+        public Professor(uint id, string name, string email, string password, string cpf, string institution, string registration, uint institutionId, string areaLecionada, string formacao): base(id, name, password, email, registration, cpf, institution, institutionId)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Email = email;
-            this.Password = password;
-            this.Matricula = matricula;
-            this.CPF = cpf;
-            this.BirthDate = birthDate;
-            this.Institution = instituicao;
+            _areaLecionada = areaLecionada;
+            _formação = formacao;
+        }
+
+
+        public Professor(uint id, string name, string password, string email, string image, string about, string registration, string cpf, DateOnly birthDate, string institution, string areaLecionada, string formacao) : base(id, name, password, email, image, about, registration, cpf, birthDate, institution)
+        {
             this._areaLecionada = areaLecionada;
             this._formação = formacao;
         }
@@ -30,14 +33,14 @@
         #region "Propriedades"
         public string AreaLecionada
         {
-            get { return _areaLecionada;}
-            set { _areaLecionada = value;}
+            get { return _areaLecionada; }
+            set { _areaLecionada = value; }
         }
 
         public string Formacao
         {
-            get { return _formação;}
-            set { _formação = value;}
+            get { return _formação; }
+            set { _formação = value; }
         }
 
         #endregion

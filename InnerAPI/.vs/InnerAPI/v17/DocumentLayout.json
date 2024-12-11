@@ -1,38 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\services\\sharedservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:services\\sharedservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\services\\postservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:services\\postservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\services\\professorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:services\\professorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\incicle sistemas 7\\source\\thirdsemester-project\\innerapi\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\models\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:models\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|c:\\users\\avill\\onedrive\\documentos\\github\\thirdsemester-project\\innerapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{808FB8D4-73E3-4CEB-A0EF-23EE8ED94E00}|InnerAPI.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,112 +34,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SharedServices.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\SharedServices.cs",
-              "RelativeDocumentMoniker": "Services\\SharedServices.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\SharedServices.cs",
-              "RelativeToolTip": "Services\\SharedServices.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwBYAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T19:27:01.085Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1790472166:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Dtos\\Login\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Login\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Dtos\\Login\\LoginDto.cs",
-              "RelativeToolTip": "Dtos\\Login\\LoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "DocumentIndex": 0,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T17:37:15.347Z",
+              "WhenOpened": "2024-06-13T19:33:58.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "StudentServices.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\StudentServices.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Services\\StudentServices.cs",
               "RelativeDocumentMoniker": "Services\\StudentServices.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\StudentServices.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Services\\StudentServices.cs",
               "RelativeToolTip": "Services\\StudentServices.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwCYAAAAlAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAWwFoAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T17:34:12.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProfessorServices.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\ProfessorServices.cs",
-              "RelativeDocumentMoniker": "Services\\ProfessorServices.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Services\\ProfessorServices.cs",
-              "RelativeToolTip": "Services\\ProfessorServices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T17:33:52.437Z",
+              "WhenOpened": "2024-06-13T19:32:54.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABhAAAA",
+              "Title": "PostServices.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Services\\PostServices.cs",
+              "RelativeDocumentMoniker": "Services\\PostServices.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Services\\PostServices.cs",
+              "RelativeToolTip": "Services\\PostServices.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAD4vxsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T00:18:15.376Z",
+              "WhenOpened": "2024-06-13T19:30:49.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfessorController.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\ProfessorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfessorController.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\ProfessorController.cs",
+              "RelativeToolTip": "Controllers\\ProfessorController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T19:29:18.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProfessorController.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\ProfessorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProfessorController.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\ProfessorController.cs",
-              "RelativeToolTip": "Controllers\\ProfessorController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBQAAAAzAAAA",
+              "DocumentIndex": 4,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Models\\Chat.cs",
+              "RelativeDocumentMoniker": "Models\\Chat.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Models\\Chat.cs",
+              "RelativeToolTip": "Models\\Chat.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T00:18:14.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InstitutionController.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\InstitutionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InstitutionController.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\InstitutionController.cs",
-              "RelativeToolTip": "Controllers\\InstitutionController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T00:18:07.274Z"
+              "WhenOpened": "2024-06-13T19:26:19.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwDYAAAAhAAAA",
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T00:18:01.47Z"
+              "WhenOpened": "2024-06-13T19:23:53.579Z",
+              "EditorCaption": ""
             }
           ]
         }

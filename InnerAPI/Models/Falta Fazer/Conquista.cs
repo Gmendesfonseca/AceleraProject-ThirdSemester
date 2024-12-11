@@ -4,37 +4,37 @@
     {
         #region "Declaração de variáveis"
         
-        private uint _idConquista;
-        private string _nomeConquista;
-        private DateTime _dataHoraConquista; //Revisar Nome da variável
-        private uint _idUsuario;
+        private uint _idAchievement;
+        private string _nameAchievement;
+        private DateTime _dateTimeAchievement; //Revisar Nome da variável
+        private uint _idUser;
 
         #endregion
 
         #region "Propriedades"
 
-        public uint IdConquista
+        public uint IdAchievement
         {
-            get { return _idConquista; }
-            set { _idConquista = value; }
+            get { return _idAchievement; }
+            set { _idAchievement = value; }
         }
 
-        public string NomeConquista
+        public string NameAchievement
         { 
-            get { return _nomeConquista; } 
-            set { _nomeConquista = value; } 
+            get { return _nameAchievement; } 
+            set { _nameAchievement = value; } 
         }
 
-        public DateTime DataHoraConquista
+        public DateTime DateTimeAchievement
         { 
-            get { return _dataHoraConquista; } 
-            set { _dataHoraConquista = value; } 
+            get { return _dateTimeAchievement; } 
+            set { _dateTimeAchievement = value; } 
         }
 
-        public uint IdUsuario
+        public uint IdUser
         {
-            get { return _idUsuario; }
-            set { _idUsuario = value;}
+            get { return _idUser; }
+            set { _idUser = value;}
         }
 
         #endregion

@@ -1,67 +1,51 @@
-﻿using InnerAPI.Controllers;
-using InnerAPI.Dtos.Courses;
+﻿
 
 namespace InnerAPI.Models
 {
-    public class Institution : User
+
+    public abstract class Institution : User
+
     {
         #region "Declaração de variáveis"
-        private string _localidadeInstituicao;
-        private DateOnly _dataCriacao;
-        public string _domain;
+        private string _address;
+        private DateOnly _creationDate;
         public string _cnpj;
-        private List<CourseDto> courses; 
-        private readonly List<Student> students; 
-        private readonly List<Professor> professors;
+        public string _domain;
         #endregion
 
         #region "Construtores"
         public Institution() : base()
         {
-            List<CourseDto> courses = new List<CourseDto>();
-            List<Student> students = new List<Student>();
-            List<Professor> professors = new List<Professor>();
+            _creationDate = new DateOnly();
+            _address = _cnpj = _domain = "";
         }
-        public Institution(uint id, string name, string email, string password, string cnpj, string domain) 
+
+        public Institution(uint id, string name, string password, string email, string cnpj, string domain) : base(id, name, password, email)
         {
-            this.Id = id;
-            this.Name = name;
-            this.Email = email;
-            this.Password = password;
-            this.CNPJ = cnpj;
-            this.Domain = domain;
+            _cnpj = cnpj;
+            _domain = domain;
         }
-        public Institution(string name, string email, string password, string localidadeInstituicao, DateOnly dataCriacao)
+
+        public Institution(uint id, string name, string password, string email, string image, string about, string address, DateOnly creationDate, string cnpj, string domain) : base(id, name, password, email, image, about)
         {
-            this.Name = name; // Herdado de User
-            this.Email = email; // Herdado de User
-            this.Password = password; // Herdado de User
-            this._localidadeInstituicao = localidadeInstituicao;
-            this._dataCriacao = dataCriacao;
-            // Inicialização das listas para evitar NullReferenceException
-            this.courses = new List<CourseDto>();
-            this.students = new List<Student>();
-            this.professors = new List<Professor>();
+            _address = address;
+            _creationDate = creationDate;
+            _cnpj = cnpj;
+            _domain = domain;
         }
         #endregion
 
         #region "Propriedades"
-        public string Localidade
+        public string Address
         {
-            get { return _localidadeInstituicao; }
-            set { _localidadeInstituicao = value; }
+            get { return _address; }
+            set { _address = value; }
         }
 
-        public DateOnly DataCriacao
+        public DateOnly CreationDate
         {
-            get { return _dataCriacao; }
-            set { _dataCriacao = value; }
-        }
-
-        public string Domain
-        {
-            get { return _domain; }
-            set { _domain = value; }
+            get { return _creationDate; }
+            set { _creationDate = value; }
         }
 
         public string CNPJ
@@ -69,52 +53,11 @@ namespace InnerAPI.Models
             get { return _cnpj; }
             set { _cnpj = value; }
         }
-        #endregion
 
-        #region "Métodos Listas"
-        public List<CourseDto> Courses
+        public string Domain
         {
-            get { return courses; }
-        }
-
-        public void addCourse(CourseDto course)
-        {
-            courses.Add(course);
-        }
-
-        public void removeCourse(CourseDto course)
-        {
-            courses.Remove(course);
-        }
-
-        public List<Student> Students
-        {
-            get { return students; }
-        }
-
-        public void addStudent(Student student)
-        {
-            students.Add(student);
-        }
-
-        public void removeStudent(Student student)
-        {
-            students.Remove(student);
-        }
-
-        public List<Professor> Professors
-        {
-            get { return professors; }
-        }
-
-        public void addProfessor(Professor professor)
-        {
-            professors.Add(professor);
-        }
-
-        public void removeProfessor(Professor professor)
-        {
-            professors.Remove(professor);
+            get { return _domain; }
+            set { _domain = value; }
         }
         #endregion
     }

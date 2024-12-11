@@ -17,7 +17,8 @@ namespace InnerAPI.Dtos.Aluno
         [Required] uint Pontuacao,
         [Required][StringLength(20)] string Matricula,
         [Required] DateOnly BirthDate,
-        [Required][StringLength(100)] string Instituicao
+        [Required][StringLength(100)] string Instituicao,
+        [Required] uint InstitutionId
     )
     {
         public bool Status { get; init; }

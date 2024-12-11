@@ -8,34 +8,43 @@ namespace InnerAPI.Services
     public class ProfessorServices
     {
         List<Professor> professors;
-        List<Institution> institutions;
+        List<Student> students;
+        List<Branch> branches;
         public ProfessorServices(SharedService _sharedService)
         {
             professors = _sharedService.Professors;
-            institutions = _sharedService.Institutions;
+            branches = _sharedService.Branches;
+            students = _sharedService.Students;
         }
 
         public Professor Register(RegisterProfessorDto register)
         {
-            var domain = register.Email.Split('@')[1]; // Pega o domínio do email
-                                                       // Encontra a instituição correta pelo domínio
-            var institution = institutions.FirstOrDefault(i => i.Domain == domain);
-            if (institution == null)
+            var branch = GetBranch(register.Email);
+            if (branch == null)
             {
                 throw new ArgumentException("Instituição não encontrada.");
             }
 
-            // Verifica se o professor já existe
-            var existingProfessor = institution.Professors.Exists(r => r.Matricula == register.Matricula || r.Email == register.Email || r.CPF == register.Cpf);
+            var existingProfessor = professors.Exists(r => r.Registration == register.Matricula || r.Email == register.Email || r.CPF == register.Cpf);
             if (existingProfessor)
             {
                 throw new ArgumentException("Este email já está sendo usado por outro usuário.");
             }
 
-            // Cria e adiciona o novo professor à instituição correta
-            uint id = (uint)institution.Professors.Count + 1;
-            Professor newProfessor = new Professor(id, register.Name, register.Email, register.Password, register.Matricula, register.Cpf, register.BirthDate, register.Instituicao, register.AreaLecionada, register.Formacao);
-            institution.Professors.Add(newProfessor);
+            uint id = (uint)professors.Count + 1; 
+            string name = register.Name;
+            string email = register.Email;
+            string password = register.Password;
+            string cpf = register.Cpf;
+            string image = "caminho/para/imagem.jpg";
+            string instituicao = register.Instituicao;
+            string matricula = register.Matricula;
+            uint institutionId = branch.Id;
+            string areaLecionada = register.AreaLecionada;
+            string formacao = register.Formacao;
+
+            Professor newProfessor = new Professor(id, register.Name, register.Email, register.Password, register.Cpf, register.Instituicao, register.Matricula, register.IntitutionId, register.AreaLecionada, register.Formacao);
+            branch.Professors.Add(newProfessor.Id);
             professors.Add(newProfessor);
 
             return newProfessor;
@@ -45,32 +54,32 @@ namespace InnerAPI.Services
         {
             string email = user.Email;
             string password = user.Password;
-            string domain = email.Split('@')[1];
-
-            var institution = institutions.FirstOrDefault(i => i.Domain == domain);
-            if (institution == null)
-            {
-                throw new ArgumentException("Instituição não encontrada.");
-            }
-
-            Professor professor = institution.Professors.FirstOrDefault(p => p.Email == email && p.Password == password);
 
             Email Email = new Email();
             if (!Email.IsValid(email))
                 throw new ArgumentException("Email inválido.");
+
+            var branch = GetBranch(email);
+            if (branch == null)
+            {
+                throw new ArgumentException("Instituição não encontrada.");
+            }
+
+            var professor = professors.FirstOrDefault(p => p.Email == email);
 
             if (professor == null)
                 throw new ArgumentException("Usuário não encontrado.");
 
             if (professor.Password != password)
                 throw new ArgumentException("Senha incorreta.");
+            professor.Online = true;
 
             return professor;
         }
 
         public Professor Update(int id, RegisterProfessorDto professor)
         {
-            var existingProfessor = institutions.SelectMany(i => i.Professors).FirstOrDefault(p => p.Id == id);
+            var existingProfessor = professors.FirstOrDefault(p => p.Id == id);
             if (existingProfessor == null)
             {
                 throw new ArgumentException("Professor não encontrado.");
@@ -84,13 +93,79 @@ namespace InnerAPI.Services
             return existingProfessor;
         }
 
-        public bool Delete(int id)
-        { institutions.SelectMany(i => i.Professors).ToList().RemoveAll(usuario => usuario.Id == id); return true; }
-
-        public List<Professor> GetProfessors()
-        {
-            return professors;
+        public bool Delete(uint id)
+        { 
+            branches.SelectMany(i => i.Professors).ToList().RemoveAll(usuario => usuario == id); 
+            professors.RemoveAll(p => p.Id == id);
+            return true; 
         }
+
+        public Branch GetBranch(string email)
+        {
+            var domain = email.Split('@')[1];
+            var branch = branches.FirstOrDefault(i => i.Domain == domain);
+            if(branch == null)
+            {
+                throw new ArgumentException("Instituição não encontrada.");
+            }
+            return branch;
+        }
+
+        public Branch GetBranch(uint id)
+        {
+            var branch = branches.FirstOrDefault(i => i.Id == id);
+            if(branch == null)
+            {
+                throw new ArgumentException("Instituição não encontrada.");
+            }
+            return branch;
+        }
+
+        public Professor GetProfessors(uint id)
+        {
+            var professor = professors.FirstOrDefault(p => p.Id == id);
+            if(professor == null)
+            {
+                throw new ArgumentException("Professor não encontrado.");
+            }
+            return professor;
+        }
+
+        public Stack<Post> Posts(uint id)
+        {
+            Stack<Post> newPostsList = new Stack<Post>();
+            var branch = branches.FirstOrDefault(i => i.Id == id);
+            newPostsList = branch.Feed;
+
+            return newPostsList;
+        }
+
+        public List<Friend> Friends(uint id)
+        {
+            List<Friend> newFriendsList = new List<Friend>();
+            List<Student> studentsList = students;
+            List<Professor> professorsList = professors;
+
+            for(int i = 0; i < studentsList.Count; i++)
+            {
+                if (studentsList[i].InstitutionId == id)
+                {
+                    Friend newFriend = new Friend(studentsList[i].Id, studentsList[i].Name, studentsList[i].Email, studentsList[i].Online);
+                    newFriendsList.Add(newFriend);
+                }
+            }   
+
+            for(int i = 0; i < professorsList.Count; i++)
+            {
+                if (professorsList[i].InstitutionId == id)
+                {
+                    Friend newFriend = new Friend(professorsList[i].Id, professorsList[i].Name, professorsList[i].Email, professorsList[i].Online);
+                    newFriendsList.Add(newFriend);
+                }
+            }
+
+            return newFriendsList;
+        }   
 
         public void Remover()
         {

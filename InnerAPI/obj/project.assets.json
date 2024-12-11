@@ -535,19 +535,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\InCicle sistemas 7\\.nuget\\packages\\": {}
+    "C:\\Users\\avill\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\InnerAPI.csproj",
+      "projectUniqueName": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\InnerAPI.csproj",
       "projectName": "InnerAPI",
-      "projectPath": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\InnerAPI.csproj",
-      "packagesPath": "C:\\Users\\InCicle sistemas 7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\InCicle sistemas 7\\source\\ThirdSemester-Project\\InnerAPI\\obj\\",
+      "projectPath": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\InnerAPI.csproj",
+      "packagesPath": "C:\\Users\\avill\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\avill\\OneDrive\\Documentos\\GitHub\\ThirdSemester-Project\\InnerAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\InCicle sistemas 7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\avill\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -555,6 +560,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -610,7 +616,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

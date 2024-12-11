@@ -2,6 +2,7 @@
 using InnerAPI.Services;
 using InnerAPI.Dtos.Login;
 using Microsoft.AspNetCore.Mvc;
+using InnerAPI.Dtos.Aluno;
 
 namespace InnerAPI.Controllers
 {
@@ -13,21 +14,21 @@ namespace InnerAPI.Controllers
             var group = app.MapGroup("student").WithParameterValidation();
 
             // GET /student/{id}
-            group.MapGet("{id}", (int id) =>
+            group.MapGet("/{id}", (uint id) =>
             {
-                return Results.Ok(studentServices.GetStudents().FirstOrDefault(s => s.Id == id));
+                return Results.Ok(studentServices.GetStudents(id).FirstOrDefault(s => s == id));
             });
 
-            // POST /student
-            group.MapPost("", (LoginDto login) =>
+            // POST /student/register
+            group.MapPost("/register", (RegisterStudentDto newStudent) =>
             {
-                Student student = studentServices.Login(login);
+                Student student = studentServices.Register(newStudent);
 
                 return Results.Created($"/student/{student.Id}", student);
             });
 
             // PUT /student/{id}
-            group.MapPut("{id}", (int id, Student updatedStudent) =>
+            group.MapPut("/{id}", (int id, Student updatedStudent) =>
             {
                 var result = studentServices.Update(id, updatedStudent);
                 if (result == null)
@@ -38,7 +39,7 @@ namespace InnerAPI.Controllers
             });
 
             // DELETE /student/{id}
-            group.MapDelete("{id}", (int id) =>
+            group.MapDelete("/{id}", (int id) =>
             {
                 bool deleted = studentServices.Delete(id);
                 if (!deleted)

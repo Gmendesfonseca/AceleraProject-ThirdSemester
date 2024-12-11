@@ -2,11 +2,13 @@
 
 namespace InnerAPI.Dtos.Login
 {
-    public record class LoginDto 
+    public record class LoginDto
     (
-        string Email,
-        string Password
-    );
-        
-
+        [Required] string Email,
+        [Required] string Password
+    )
+    {
+        public string Email { get; init; } = Email;
+        public string Password { get; init; } = Password;
+    }
 }

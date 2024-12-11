@@ -16,6 +16,7 @@ namespace InnerAPI.Dtos.Professor
         [Required][StringLength(11)] string Cpf,
         DateOnly BirthDate,
         [Required] string Instituicao,
+        [Required] uint IntitutionId,
         [Required] string AreaLecionada,
         [Required] string Formacao
     )

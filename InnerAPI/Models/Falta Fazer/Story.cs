@@ -5,8 +5,8 @@
         #region "Declaração de variáveis"
 
         private uint _idStory;
-        private uint _idUsuario;
-        private DateOnly _dataPostagem;
+        private uint _idUser;
+        private DateOnly _datePost;
 
         #endregion
 
@@ -18,16 +18,16 @@
             set { _idStory = value; }
         }
 
-        public uint IdUsuario
+        public uint IdUser
         { 
-            get { return _idUsuario;}
-            set { _idUsuario = value;}
+            get { return _idUser;}
+            set { _idUser = value;}
         }
 
-        public DateOnly DataPostagem
+        public DateOnly DatePost
         {
-            get { return _dataPostagem;}
-            set { _dataPostagem = value;}
+            get { return _datePost;}
+            set { _datePost = value;}
         }
 
         #endregion
